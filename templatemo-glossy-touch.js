@@ -105,7 +105,7 @@ let currentPage = 'home';
         
            document.querySelector('form').addEventListener('submit', async function(e) {
   e.preventDefault();
-  this.reset();
+  
 
   
 
@@ -121,6 +121,10 @@ let currentPage = 'home';
     // show success message
     console.log("successful");
     alert("Form submitted successfully")
+
+    //reset
+     this.reset();
+          
   } else {
     // show error
     console.log("Server error:", response.status);
