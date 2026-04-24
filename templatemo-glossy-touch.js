@@ -106,16 +106,13 @@ let currentPage = 'home';
            document.querySelector('form').addEventListener('submit', async function(e) {
   e.preventDefault();
   
-
-  
-
   const formData = new FormData(this);
 
   const response = await fetch('https://usebasin.com/f/58a76fa01723', {
     method: 'POST',
     body: formData
     
-  });
+    });
 
   if (response.ok) {
     // show success message
@@ -123,25 +120,18 @@ let currentPage = 'home';
     alert("Form submitted successfully")
 
     //reset
-     this.reset();
-          
+    this.reset();
+
   } else {
     // show error
     console.log("Server error:", response.status);
     alert("Something went wrong, please try again")
   }
 
- 
 });
-
-
-
 
 app.post('/send-email', async (req, res) => {
   // use nodemailer or similar
-
-
-
   
 });
 
